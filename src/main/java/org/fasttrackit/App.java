@@ -1,6 +1,5 @@
 package org.fasttrackit;
 
-
 import java.util.Scanner;
 
 public class App
@@ -8,45 +7,37 @@ public class App
     public static void main( String[] args )
     {
 
-        Scanner input = new Scanner(System.in);
-        int nr1=0;
-        int nr2=0;
-        int sum;
-        int minus;
-        int multiplication;
-        int division;
-        int modulo;
+        int nr1;
+        int nr2;
+        int calc;
 
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter first number:");
         nr1=input.nextInt();
         System.out.println("Enter second number: ");
         nr2=input.nextInt();
 
-        sum = nr1+nr2;
-        System.out.println("The sum of the two numbers is: " + sum);
+        Sum add=new Sum();
+        calc=add.sum(nr1,nr2);
+        System.out.println("The sum of the two numbers is: " +  calc);
 
-//        having a positive result
+        Substract sub=new Substract();
+        calc=sub.sub(nr1,nr2);
+        System.out.println("The substraction of the two numbers is: "+ calc);
 
-        if (nr1>nr2){
-            minus = nr1-nr2;
-            System.out.println("The subtraction of the two numbers is: " + minus);
-        }
-        else {
-            minus = nr2 - nr1;
-            System.out.println("The subtraction of the two numbers is: " + minus);
-        }
+        Product prod= new Product();
+        calc=prod.prod(nr1,nr2);
+        System.out.println("The product of the two numbers is: "+ calc);
 
-        multiplication = nr1*nr2;
-        System.out.println("The multiplication of the two numbers is: "+ multiplication);
+        Division div=new Division();
+        calc=div.div(nr1,nr2);
+        System.out.println("The division of the two numbers is: "+calc);
 
-        division = nr1/nr2;
-        System.out.println("The division of the two numbers is: "+ division);
-
-        modulo = nr1%nr2;
-        System.out.println("The modulo result of the two numbers is: "+ modulo);
-
-
+        Modulo mod = new Modulo();
+        calc= mod.mod(nr1,nr2);
+        System.out.println("The modulo result of the two numbers is "+calc);
 
     }
+
 
 }
