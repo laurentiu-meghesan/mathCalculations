@@ -6,4 +6,8 @@ public class Product {
         return x*y;
     }
 
+    public double prod(double x,double y){
+        return x*y;
+    }
+
 }

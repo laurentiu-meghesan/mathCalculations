@@ -8,7 +8,12 @@ public class Division {
             return x/y;
         }
         else return y/x;
-
     }
+    public double div(double x, double y){
 
+        if(x>y){
+            return x/y;
+        }
+        else return y/x;
+    }
 }
