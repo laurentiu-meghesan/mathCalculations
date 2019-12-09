@@ -8,6 +8,19 @@ public class App {
         int nr1, nr2, calc;
         double n1, n2, calc2;
 
+        LogicalOp op = new LogicalOp();
+        op.counting();
+        op.minusCount();
+        op.nrBetween();
+        op.biggestNr();
+        op.even();
+        op.odd();
+        int calc3 = op.sumFrom();
+        System.out.println(calc3);
+        double calc4 = op.average();
+        System.out.println(calc4);
+        op.pattern();
+
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter two numbers: ");
 
